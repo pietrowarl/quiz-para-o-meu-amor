@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Perguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="pergunta">Pergunta 1: Onde nos falamos pela prmeira vez?</h1>
+        <input type="text" id="resposta" placeholder="Digite sua resposta aqui">
+        <button id="enviar" onclick="verificarResposta()">Enviar</button>
+        <img id="imagem" style="display:none;">
+        <button id="continuar" style="display:none;" onclick="proximaPergunta()">Continuar</button>
+        <div class="decoracao" id="decoracao" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

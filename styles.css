@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.centralizar {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    max-height: 80vh; /* Garante que a imagem não ultrapasse a tela */
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border: 5px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6); 
+    
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #ff69b4;
+}
+
+button {
+    display: block;
+margin: 20px auto; /* Garante a centralização */
+text-align: center;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+input, button, h1 {
+    position: relative;
+    z-index: 5; /* Garante que a interface fique acima dos corações */
+}
+
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.coracao-espalhado {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: flutuar 4s infinite;
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.frase {
+    display: block;
+    font-size: 20px;
+    color: pink;
+    margin-top: 10px;
+}
+
+.texto-espalhado, .coracao-espalhado {
+    position: absolute;
+    z-index: 1; /* Garante que os corações fiquem abaixo dos botões e inputs */
+    pointer-events: none; /* Impede que bloqueiem cliques e digitação */
+}
+
+.mensagem-final {
+    text-align: center; /* Centraliza horizontalmente */
+    font-size: 22px; /* Aumenta o tamanho da fonte */
+    color: #ff69b4; /* Define uma cor rosa bonita */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    max-width: 80%; /* Limita a largura para não ficar muito grande */
+    margin: 20px auto; /* Centraliza a margem */
+    line-height: 1.5; /* Melhora o espaçamento entre as linhas */
+}
